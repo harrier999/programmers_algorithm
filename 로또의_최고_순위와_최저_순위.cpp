@@ -1,13 +1,10 @@
 #include <string>
 #include <vector>
-
 using namespace std;
-
 
 int is_included(vector<int> lottos, int win_num){
     int i;
     int win = 0;
-
     for(i=0;i<6;i++){
         if (lottos.at(i) == win_num)
             win++;
@@ -18,7 +15,6 @@ int is_included(vector<int> lottos, int win_num){
 int nuumber_of_zero(vector<int> lottos){
     return is_included(lottos, 0);
 }
-
 
 int number_of_coincide(vector<int> lottos, vector<int> win_nums){
     int i;
@@ -42,7 +38,6 @@ vector<int> solution(vector<int> lottos, vector<int> win_nums) {
         max = 1;
     if (min < 2)
         min = 1;
-
     answer.push_back(7-max);
     answer.push_back(7-min);
     return answer;
