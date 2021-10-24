@@ -1,6 +1,50 @@
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
+using namespace std;
+
+int is_possible(long long time, int n, vector<int> times) {
+	long long i, num = 0;
+	for (i = 0; i < times.size(); i++) {
+		num += time / times.at(i);
+	}
+	if (num < n)
+		return 0;
+	if (n <= num)
+		return 1;
+}
+
+long long solution(int n, vector<int> times) {
+	sort(times.begin(), times.end());
+	long long max = (long long)times.at(0) * (long long)n;
+	long long min = 0;
+	long long mid = max / 2;	
+
+	while (max > min) {
+		if (is_possible(mid, n, times)) {
+			max = mid;
+			mid = (max + min) / 2;
+		}
+		if (!is_possible(mid, n, times)) {
+			min = mid + 1;
+			mid = (max + min) / 2;
+		}
+	}
+	return mid;
+}
+
+ int main(){
+	 vector<int> times = { 7, 10 };
+	 int n = 6;
+	 cout << solution(n, times);
+
+ }
+
+
+
+
+/*
 using namespace std;
 
 long long solution(int n, vector<int> times) {
@@ -41,3 +85,5 @@ long long solution(int n, vector<int> times) {
 	 cout << solution(n, times);
 
  }
+
+ */
