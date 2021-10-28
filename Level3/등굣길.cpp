@@ -7,18 +7,19 @@ using namespace std;
 
 /*https://programmers.co.kr/learn/courses/30/lessons/42898*/
 /*프로그래머스 고득점 kit 동적계획법 level3*/
-void print_vector(vector<vector<int>> map) { //for testing only
-	const int n = map.size();
-	const int m = map.front().size();
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			cout << map[i][j];
-		}
-		cout << endl;
-	}
-	cout << endl;
-	return;
-}
+
+// void print_vector(vector<vector<int>> map) { //for testing only
+// 	const int n = map.size();
+// 	const int m = map.front().size();
+// 	for (int i = 0; i < n; i++) {
+// 		for (int j = 0; j < m; j++) {
+// 			cout << map[i][j];
+// 		}
+// 		cout << endl;
+// 	}
+// 	cout << endl;
+// 	return;
+// }
 int solution(int m, int n, vector<vector<int>> puddles) {
 	int answer = 0;
 	int tmp;
@@ -28,7 +29,7 @@ int solution(int m, int n, vector<vector<int>> puddles) {
 	for (int i = 0; i < puddles.size(); i++)    //set puddles to map
 		map[puddles[i][1]][puddles[i][0]] = -1;
 	//print_vector(map);
-	//cout << "------------ -" << endl;
+	//cout << "-------------" << endl;
 	//return 1;
 	for (int i = 1; i < m + 1; i++) {
 		for (int j = 1; j < n + 1; j++) {
@@ -45,15 +46,15 @@ int solution(int m, int n, vector<vector<int>> puddles) {
 	return map[n][m];
 }
 
-int main() {
-	int m = 4;
-	int n = 3;
-	vector<vector<int>> puddles;
-	vector<int> tmp;
-	tmp.push_back(2);
-	tmp.push_back(2);
-	puddles.push_back(tmp);
-	puddles.push_back(tmp);
-	print_vector(puddles);
-	cout<< solution(m, n, puddles);
-}
+// int main() {
+// 	int m = 4;
+// 	int n = 3;
+// 	vector<vector<int>> puddles;
+// 	vector<int> tmp;
+// 	tmp.push_back(2);
+// 	tmp.push_back(2);
+// 	puddles.push_back(tmp);
+// 	puddles.push_back(tmp);
+// 	print_vector(puddles);
+// 	cout<< solution(m, n, puddles);
+// }
