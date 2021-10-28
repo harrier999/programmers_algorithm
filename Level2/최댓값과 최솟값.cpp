@@ -4,7 +4,7 @@
 #include <algorithm>
 
 using namespace std;
-string my_itoa(long num) {
+string my_itoa(long num) { //use to_string instead
 	string str = "";
 	string tmp_str = "";
 	int sign = 1;
