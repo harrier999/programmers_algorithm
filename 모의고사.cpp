@@ -4,8 +4,8 @@
 #include <algorithm>
 using namespace std;
 
-
-
+/*프로그래머스 1단계 완전탐색*/
+/*https://programmers.co.kr/learn/courses/30/lessons/42840*/
 
 vector<int> solution(vector<int> answers) {
 	vector<int> a1 = { 1, 2, 3, 4, 5 };
