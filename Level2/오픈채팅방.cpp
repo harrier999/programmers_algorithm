@@ -6,7 +6,9 @@
 
 using namespace std;
 
-
+// 2019 KAKAO BLIND RECRUITMENT
+// https://programmers.co.kr/learn/courses/30/lessons/42888
+//string stream을 이용하면 게 띄어쓰기를 제거할 수 있다.
 void tokenize(string str, map<string, string> &uid_name, vector<pair<string, string>> &tmp) {
 	char* c_string = (char*) str.c_str();
 	char* instruction;
