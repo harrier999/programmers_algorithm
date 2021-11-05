@@ -12,8 +12,5 @@ int solution(vector<int> A, vector<int> B)
     for(int i =0; i<A.size(); i++){
         answer+= A.at(i) * B.at(i);
     }
-    
-    
-
     return answer;
 }
